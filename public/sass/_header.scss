@@ -1,0 +1,93 @@
+// navbar
+.MuiMenu-paper {
+  background: rgba(64, 27, 27, 0.18) !important;
+  backdrop-filter: blur(12px) !important;
+}
+.bg-navbar {
+  background: rgba(28, 30, 35, 0.2) !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  // height: 75px !important;
+}
+
+.borderMenu {
+  border: 2px solid rgba(253, 253, 253, 0.6) !important;
+  padding: 8px !important;
+  border-radius: 15% !important;
+}
+
+.flexgrow-1 {
+  flex-grow: 1 !important;
+}
+
+.avatar-nav {
+  height: 46px !important;
+  width: 23px !important;
+}
+
+.navbar-hover {
+  color: rgba(255, 255, 255, 0.712);
+  a {
+    transition: all 0.5s ease;
+    margin-left: 24px !important;
+    font-size: 15px !important;
+    &:hover {
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+.widthLogo {
+  width: 150px !important;
+  padding-left: 10%;
+}
+.styleLogoXs {
+  display: flex;
+  padding-top: 5px;
+}
+.iconFont {
+  font-size: 1.8rem !important;
+}
+.marginDivider {
+  margin-left: 15px !important;
+  margin-right: 10px !important;
+}
+.dividerMarginXs {
+  span {
+    border-bottom: 1px dashed rgba(253, 253, 253, 0.2) !important;
+    width: 85% !important;
+    margin: 0 auto !important;
+  }
+}
+// navbar
+
+// header
+.bg-header {
+  background-image: url("../img/header.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.avatar-header {
+  z-index: 10020;
+  position: fixed !important;
+  width: 60px !important;
+  height: 60px !important;
+  right: 25px !important;
+  bottom: 25px !important;
+  background-color: #d39b22 !important;
+}
+
+.size-fixed {
+  font-size: 30px !important;
+}
+
+.btn-header {
+  width: 11rem !important;
+  font-size: 1.1rem !important;
+  border-radius: 150px !important;
+}
+.arrow-header {
+  position: absolute;
+  left: -2.5rem;
+  top: -5rem;
+}

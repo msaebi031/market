@@ -1,0 +1,48 @@
+.bg-panel {
+  background-color: #f0f2f5;
+}
+.maxWitdh-panel {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+//budget
+.card-budget {
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.title-budget {
+  font-size: 13px;
+}
+.paragraf-budget {
+  font-size: 17px;
+}
+
+//dashboard
+.show-admin {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 5px;
+}
+
+.avatar-dashboard {
+  width: 50px !important;
+  height: 50px !important;
+  border: 1px solid #fff0f0 !important;
+}
+
+//navbar
+.padding-input-navbar-dashboard {
+  padding: 10px !important;
+}
+
+//modal
+.style-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // width: 400;
+  background-color: #fff;
+  box-shadow: 24px;
+  padding: 2px 4px 3px 4px;
+}

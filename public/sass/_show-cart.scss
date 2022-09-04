@@ -1,0 +1,58 @@
+.cart-card {
+  border: 2px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 9px !important;
+  background: none !important;
+  max-width: 345 !important;
+  text-align: center !important;
+  // padding: .4rem !important;
+}
+
+// search
+.search {
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 2px !important;
+  background: none !important;
+  margin-top: 25px !important;
+  padding-right: 26px !important;
+  padding-left: 13px !important;
+  height: 50px !important;
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  margin-top: 7rem !important;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+// search
+
+// grouping
+.grouping-tabs {
+  height: 42px !important;
+  max-width: 100% !important;
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 2px !important;
+  margin-top: 2rem !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.grouping-tab {
+  direction: ltr !important;
+  bottom: 12px;
+  padding: 0 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.048);
+}
+
+// grouping
+
+//Card
+.card-img-showcard {
+  height: 135px;
+  padding-top: 21px;
+}
+.img-showcard {
+  width: 45%;
+  height: 100%;
+}

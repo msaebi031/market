@@ -1,0 +1,55 @@
+//default button
+.btn {
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 45px;
+  text-decoration: none;
+  position: relative;
+  text-transform: uppercase;
+  padding: 12px;
+  border-radius: 3px;
+}
+
+/////////////////////////////////
+//button one
+///////////////////////////////
+
+@keyframes btn-1 {
+  0% {
+    stroke-width: 3;
+    stroke-dasharray: 422, 0;
+  }
+  100% {
+    stroke-width: 3;
+    stroke-dasharray: 1, 422;
+    stroke-dashoffset: 422;
+  }
+}
+
+.btn-1 {
+  background: darken($warning, 1.5%);
+  letter-spacing: 1px;
+  transition: all 0.351s linear;
+
+  svg {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: #fff;
+    transition: all 0.35s linear;
+    animation: btn-1 3s linear infinite;
+  }
+}
+
+.btn-1:hover {
+  background-color: rgb(147, 108, 23);
+  font-weight: 900;
+  letter-spacing: 1px;
+}

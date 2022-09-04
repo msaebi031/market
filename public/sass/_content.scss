@@ -1,0 +1,42 @@
+//About
+.span-top {
+    color: #D39B22 !important;
+    font-size: 2.6rem !important;
+}
+.img-about{
+    margin: 0 auto !important;
+}
+
+//Comment
+.box-center {
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    padding: 17px;
+    border-radius: 4px;
+}
+
+
+.avatar-center {
+    width: 67px !important;
+    height: 67px !important;
+    border: 1px solid #FFF0F0 !important;
+}
+
+.swiper-pagination-bullet {
+    position: relative !important;
+    background-color: rgba(254, 206, 104, 0.42) !important;
+}
+
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet {
+    top: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px !important;
+    background-color: #D39B22 !important;
+    border-radius: 10px !important;
+}
+
+.swiper-slide {
+    margin-bottom: 44px !important;
+}
