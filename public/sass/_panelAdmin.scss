@@ -35,7 +35,21 @@
   padding: 10px !important;
 }
 
-//modal
+// Product
+.btnModal-border {
+  border: none !important;
+}
+
+// search
+.btnModal-input {
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  height: 50px !important;
+  font-size: 14px !important;
+  margin-bottom: 15px;
+}
+// search
+
+// ModalDelete
 .style-modal {
   position: absolute;
   top: 50%;
@@ -46,3 +60,18 @@
   box-shadow: 24px;
   padding: 2px 4px 3px 4px;
 }
+// ModalDelete
+
+// btnModal, editModal
+.btn-edit-modal {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 400px !important;
+  background-color: #fff !important;
+  border: none !important;
+  box-shadow: 23 !important;
+  padding: 2rem !important;
+}
+// btnModal, editModal

@@ -1,11 +1,20 @@
 import { Box, Button, Modal, Typography } from "@mui/material";
 import http from "../../utils/httpServise";
+import { successTost } from "../../utils/reactTostify";
 
-const ModalDelete = ({ openModalDelete, handleOpenModalDelete, id }) => {
+const ModalDelete = ({
+  openModalDelete,
+  handleOpenModalDelete,
+  id,
+  handleGetPage,
+}) => {
   const handleDelete = () => {
-    http.get("/api/product/delete", {
+    http.post("/api/product/delete", {
       id,
     });
+    handleOpenModalDelete();
+    handleGetPage();
+    successTost("با موفقیت حذف شد");
   };
 
   return (

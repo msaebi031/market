@@ -1,7 +1,8 @@
 import { DeleteProduct } from "../../../server/controllers/product";
 
 export default async function handler(req, res) {
-  await DeleteProduct({ id: 1 });
+  const { id } = req.body;
+  await DeleteProduct({ id });
 
-  res.status(200).json({ name: "John Doe" });
+  res.status(200).json({ result: true });
 }

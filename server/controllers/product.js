@@ -16,9 +16,33 @@ const SelectProduct = async ({ id }) => {
   return await Product.findOne({ where: { id } });
 };
 
+const SelectProductOfPage = async ({ offset, limit }) => {
+  const products = await Product.findAll({ offset, limit });
+  return products;
+};
+
+const ProductCount = async () => {
+  const productCount = await Product.count();
+  return productCount;
+};
+
+const UpdateProduct = async ({ id, name, taraz, dic, price, tab, value }) => {
+  const product = await Product.findOne({ where: { id } });
+  product.name = name;
+  product.taraz = taraz;
+  product.dic = dic;
+  product.price;
+  product.tab;
+  product.value;
+  await product.save();
+};
+
 module.exports = {
   CreateProduct,
   DeleteProduct,
   SelectProduct,
   SelectAllProduct,
+  SelectProductOfPage,
+  ProductCount,
+  UpdateProduct,
 };
