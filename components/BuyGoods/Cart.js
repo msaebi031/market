@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import {
   Box,
   Card,
@@ -23,8 +23,13 @@ import { TbFaceIdError } from "react-icons/tb";
 import { deleteCart } from "../redux/cart/action";
 
 const Cart = () => {
+  const [openKeepModal, setOpenKeepModal] = useState(false);
   const { cart, product } = useSelector((state) => state);
   const dispatch = useDispatch();
+
+  const handleOpenKeepModal = () => {
+    setOpenKeepModal(!openKeepModal);
+  };
   return (
     <Fragment>
       <Container maxWidth="xl">
@@ -61,8 +66,12 @@ const Cart = () => {
               item
               xs={12}
             >
-              <KeepModal />
-
+              <a className="btn btn-1 font-bold" onClick={handleOpenKeepModal}>
+                <svg>
+                  <rect x="0" y="0" fill="none" width="100%" height="100%" />
+                </svg>
+                نهایی کردن خرید
+              </a>
               <Link href="/">
                 <Button
                   sx={{ color: "warning.main" }}
@@ -205,6 +214,11 @@ const Cart = () => {
             ))}
           </Grid>
         )}
+        <KeepModal
+          handleOpenKeepModal={handleOpenKeepModal}
+          openKeepModal={openKeepModal}
+          setOpenKeepModal={setOpenKeepModal}
+        />
       </Container>
     </Fragment>
   );

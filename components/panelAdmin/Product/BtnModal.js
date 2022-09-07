@@ -124,7 +124,7 @@ export default function BtnModal({
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box className="btn-edit-modal">
+        <Box className="btn-edit-modal" width={{ xs: "80%", md: "40%" }}>
           <Typography
             className="font-bold text-center"
             variant="h6"

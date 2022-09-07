@@ -26,12 +26,22 @@ var upload = multer({ storage: storage });
 /******************************************************************/
 const sequelize = require("./server/utils/database");
 const Product = require("./server/models/product");
+const Order = require("./server/models/order");
+const { CreatePay, VerifyPay } = require("./server/middleware/zarinpal");
 
 /******************************************************************/
 app.prepare().then(async () => {
-  sequelize.sync({ Product }).catch();
+  sequelize.sync({ Product, Order }).catch();
 
   server.post("/upload", upload.single("uploaded_file"));
+
+  server.get("/PaymentRequest", function (req, res) {
+    CreatePay(req, res);
+  });
+
+  server.get("/PaymentVerification/:Amount/:Id", function (req, res) {
+    VerifyPay(req, res);
+  });
 
   server.all("*", (req, res) => {
     return handle(req, res);

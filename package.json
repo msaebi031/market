@@ -11,6 +11,7 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
+    "@mui/lab": "^5.0.0-alpha.97",
     "@mui/material": "^5.10.1",
     "@reduxjs/toolkit": "^1.8.5",
     "axios": "^0.27.2",
@@ -37,7 +38,8 @@
     "redux-thunk": "^2.4.1",
     "sass": "^1.54.0",
     "sequelize": "^6.21.4",
-    "swiper": "^8.3.2"
+    "swiper": "^8.3.2",
+    "zarinpal-checkout": "^0.2.7"
   },
   "devDependencies": {
     "eslint": "8.22.0",

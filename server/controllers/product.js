@@ -1,4 +1,5 @@
 const Product = require("../models/product");
+const { Op } = require("sequelize");
 
 const CreateProduct = async ({ name, taraz, dic, price, tab, value }) => {
   await Product.create({ name, taraz, dic, price, tab, value });
@@ -37,6 +38,16 @@ const UpdateProduct = async ({ id, name, taraz, dic, price, tab, value }) => {
   await product.save();
 };
 
+const SearchProduct = async ({ name }) => {
+  return await Product.findAll({
+    where: {
+      name: {
+        [Op.like]: `%${name}%`,
+      },
+    },
+  });
+};
+
 module.exports = {
   CreateProduct,
   DeleteProduct,
@@ -45,4 +56,5 @@ module.exports = {
   SelectProductOfPage,
   ProductCount,
   UpdateProduct,
+  SearchProduct,
 };
