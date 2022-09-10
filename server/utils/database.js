@@ -1,6 +1,11 @@
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize("market_db", "root", "45573691m", {
+const USER_DATA = process.env.USER_DATA;
+const NAME_DATA = process.env.NAME_DATA;
+const PASSWORD_DATA = process.env.PASSWORD_DATA;
+console.log(USER_DATA);
+
+const sequelize = new Sequelize(USER_DATA, NAME_DATA, PASSWORD_DATA, {
   dialect: "mysql",
   host: "localhost",
 });

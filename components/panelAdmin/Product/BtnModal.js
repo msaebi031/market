@@ -136,7 +136,7 @@ export default function BtnModal({
 
           <Box mt={3} display="grid">
             <form
-              enctype="multipart/form-data"
+              encType="multipart/form-data"
               onSubmit={handleRegister}
               id="createProduct"
             >

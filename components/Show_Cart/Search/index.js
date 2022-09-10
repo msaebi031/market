@@ -58,13 +58,19 @@ const Search = ({ reSearch, product, cart }) => {
                 var find = cart.find((o) => o.id === item.id);
                 return (
                   <Grid key={index} item xs={12} sm={4} md={3} lg={2.4}>
-                    <Card className="cart-card">
+                    <Card
+                      sx={{
+                        width: { xs: "309px", sm: "auto" },
+                        m: { xs: "0 auto" },
+                      }}
+                      className="cart-card"
+                    >
                       <CardMedia
                         display="initial"
                         className="card-img-showcard"
                       >
                         <Box
-                          src={`/img/show-cart/${item.name}.png`}
+                          src={`/uploads/${item.name}.png`}
                           component="img"
                           alt={item.name}
                           className="img-showcard"

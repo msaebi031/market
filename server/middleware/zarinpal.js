@@ -2,7 +2,7 @@ const ZarinpalCheckout = require("zarinpal-checkout");
 
 const zarinpal = ZarinpalCheckout.create(
   "653fa8d8-8a22-48e8-9d16-abc9a2588251",
-  true
+  false
 );
 
 const CreatePay = (req, res) => {
@@ -10,7 +10,7 @@ const CreatePay = (req, res) => {
   zarinpal
     .PaymentRequest({
       Amount,
-      CallbackURL: `http://localhost:3000/PaymentVerification/${Amount}/${Id}`,
+      CallbackURL: `https://demo.target-designer.com/PaymentVerification/${Amount}/${Id}`,
       Description: "Buy Shop Nasim",
       Mobile,
       Id,

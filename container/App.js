@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import { Fragment } from "react";
 import { Container } from "@mui/material";
-
 import NavBar from "../components/Home/Header/NavBar";
 import Header from "../components/Home/Header";
 import DownHeader from "../components/Home/DownHeader";

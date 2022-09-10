@@ -1,7 +1,6 @@
 import {
   Box,
   Grid,
-  Avatar,
   Typography,
   Button,
   Container,
@@ -38,7 +37,8 @@ const Header = () => {
                 component="p"
                 className="font-light"
                 color="light.contrastText"
-                py={{ xs: 2, sm: 0.6, md: 0.6, lg: 2 }}
+                pb={{ xs: 2, sm: 0.6, md: 0.6, lg: 1.4 }}
+                pt={.1}
                 fontSize={{ xs: "1rem", sm: "1.1rem" }}
               >
                 با سفارش آنلاین می توانید در وقت خود نهایت سرفه جویی را کنید و

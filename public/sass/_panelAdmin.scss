@@ -86,7 +86,8 @@
 // btnModal, editModal
 
 // productSearch
-.productSearch {
+ // productSearch
+ .product-Search{
   font-size: 13px;
   height: 43px;
   color: black;
@@ -94,6 +95,10 @@
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
   border: none !important;
   margin: 10px 0px 10px;
+
+  ::placeholder{
+    color: black !important;
+  }
 }
 // productSearch
 

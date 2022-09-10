@@ -96,7 +96,7 @@ const Cart = () => {
                   <CardMedia
                     component="img"
                     sx={{ width: { xs: "25%", sm: "25%" } }}
-                    image={`/img/show-cart/${item.name}.png`}
+                    image={`/uploads/${item.name}.png`}
                     alt="Live from space album cover"
                     className="card-img-cart"
                   />

@@ -2,7 +2,10 @@
 const next = require("next");
 const express = require("express");
 const multer = require("multer");
+const fs = require("fs");
 const server = express();
+
+require("dotenv").config();
 
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -16,13 +19,11 @@ var storage = multer.diskStorage({
     cb(null, "uploads/");
   },
   filename: function (req, file, cb) {
-    console.log(req.body);
-    console.log(req.file);
-    cb(null, file.fieldname + "-" + Date.now() + ".png");
+    cb(null, file.originalname);
   },
 });
 
-var upload = multer({ storage: storage });
+var upload = multer({ storage: storage }).any();
 /******************************************************************/
 const sequelize = require("./server/utils/database");
 const Product = require("./server/models/product");
@@ -33,7 +34,14 @@ const { CreatePay, VerifyPay } = require("./server/middleware/zarinpal");
 app.prepare().then(async () => {
   sequelize.sync({ Product, Order }).catch();
 
-  server.post("/upload", upload.single("uploaded_file"));
+  server.post("/upload", (req, res) => {
+    upload(req, res, function (err) {
+      fs.renameSync(
+        `uploads/${req.files[0].originalname}`,
+        `uploads/${req.body.name}.png`
+      );
+    });
+  });
 
   server.get("/PaymentRequest", function (req, res) {
     CreatePay(req, res);

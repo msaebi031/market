@@ -2,11 +2,9 @@ import { ThemeProvider } from "@mui/material";
 import theme from "../components/theme";
 import { ToastContainer } from "react-toastify";
 import { wrapper } from "../components/redux/store";
-import { getProduct } from "../components/Servise/getData";
-import { useMemo, useState } from "react";
+// import { getProduct } from "../components/Servise/getData";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../components/redux/product/action";
-import Fixed from "../components/Fixed";
 import Router from "next/router";
 import Loading from "../components/Loading";
 import "react-toastify/dist/ReactToastify.css";
@@ -42,7 +40,6 @@ function MyApp({ Component, pageProps }) {
         toastClassName="style-toast font-light"
         autoClose={2000}
       />
-      <Fixed />
       {loading ? <Loading /> : ""}
     </ThemeProvider>
   );

@@ -8,7 +8,7 @@ const ProductSearch = ({ handleSearch }) => {
   return (
     <OutlinedInput
       placeholder="نام محصول را وارد کنید ..."
-      className="productSearch font-light"
+      className="product-Search font-light"
       onChange={(e) => setUseSearch(e.target.value)}
       value={searchItem}
       endAdornment={

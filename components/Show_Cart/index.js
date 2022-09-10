@@ -6,6 +6,8 @@ import Head from "next/head";
 import { Container } from "@mui/material";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+import Fixed from "../Fixed";
+
 
 const Show_Cart = () => {
   const router = useRouter();
@@ -24,6 +26,7 @@ const Show_Cart = () => {
         <Search reSearch={search} product={product} cart={cart} />/
         <Grouping product={product} cart={cart} />
       </Container>
+      <Fixed />
     </Fragment>
   );
 };

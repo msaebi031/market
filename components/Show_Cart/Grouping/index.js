@@ -19,7 +19,7 @@ import { GiWheat, GiFruitBowl, GiMilkCarton, GiCupcake } from "react-icons/gi";
 import { BsCheckAll } from "react-icons/bs";
 import { editProduct } from "../../redux/product/action";
 import { handleCheckCart } from "../../redux/cart/action";
-
+import _ from "lodash";
 const Grouping = ({ product, cart }) => {
   const items = [
     { icon: <BsCheckAll size="1.5rem" />, name: "همه" },
@@ -36,15 +36,7 @@ const Grouping = ({ product, cart }) => {
     setValue(newValue);
   };
 
-  const itemGrid =
-    value === 0
-      ? product
-      : product.filter((entry) =>
-          Object.values(entry).some(
-            (val) => typeof val === "string" && val.value.includes(value)
-          )
-        );
-
+  const itemGrid = value === 0 ? product : _.groupBy(product, "value")[value];
   return (
     <Fragment>
       <Tabs
@@ -70,7 +62,7 @@ const Grouping = ({ product, cart }) => {
           />
         ))}
       </Tabs>
-      {itemGrid.length === 0 ? (
+      {itemGrid == undefined ? (
         <Box mt={2}>
           <Typography
             className="font-bold"
@@ -88,10 +80,16 @@ const Grouping = ({ product, cart }) => {
             var find = cart.find((o) => o.id === item.id);
             return (
               <Grid key={index} item xs={12} sm={4} md={3} lg={2.4}>
-                <Card className="cart-card">
+                <Card
+                  sx={{
+                    width: { xs: "309px", sm: "auto" },
+                    m: { xs: "0 auto" },
+                  }}
+                  className="cart-card"
+                >
                   <CardMedia display="initial" className="card-img-showcard">
                     <Box
-                      src={`/img/show-cart/${item.name}.png`}
+                      src={`/uploads/${item.name}.png`}
                       component="img"
                       alt={item.name}
                       className="img-showcard"

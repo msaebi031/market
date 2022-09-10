@@ -108,7 +108,7 @@ const CardProduct = () => {
                         <TableCell>
                           <Avatar
                             alt={order.name}
-                            src={"/img/content/content-center/img-1.jpg"}
+                            src={`/uploads/${order.name}.png`}
                             className="avatar-dashboard"
                             variant="rounded"
                           />
@@ -143,6 +143,8 @@ const CardProduct = () => {
                               <EditOutlined color="secondary" />
                             </IconButton>
                           </Tooltip>
+                        </TableCell>
+                        <TableCell className="text-left">
                           <Tooltip
                             enterDelay={300}
                             arrow
@@ -180,6 +182,7 @@ const CardProduct = () => {
           display={orders.length === 0 ? "none" : "flex"}
         >
           <Pagination
+            className="product-Pagination"
             count={count}
             color="secondary"
             onChange={(event, value) => {
